@@ -703,9 +703,13 @@ class App extends Component {
 
 
   render() {
+    
     return (
+      
       <Router>
         <div className="App">
+        {/* Immediately redirects to Main page of Guest User, remove later */}
+        < Redirect to = '/Main' / >
         <Route 
           exact path="/"
           render={(props) => (

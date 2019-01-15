@@ -98,7 +98,7 @@ class Main extends Component {
     render() {
         return (
             <div className="main" key="main">
-                <button className="main__messagesButton" onClick={this.props.handleClickDisplayMessages}><FontAwesomeIcon className="app__font-awesome" icon={faEnvelope} /></button>
+                {/* <button className="main__messagesButton" onClick={this.props.handleClickDisplayMessages}><FontAwesomeIcon className="app__font-awesome" icon={faEnvelope} /></button> */}
                     {this.props.messagesdisplayed 
                     ? (
                     <Messages className="messages"
