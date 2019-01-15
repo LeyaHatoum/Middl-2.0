@@ -10,6 +10,7 @@ import Main from './Main'
 // import MapWithMarkerClusterer from './MyMapComponent'
 import FindInvite from './FindInvite'
 
+//COMMENT
 
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
