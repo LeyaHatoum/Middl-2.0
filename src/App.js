@@ -11,6 +11,7 @@ import Main from './Main'
 import FindInvite from './FindInvite'
 
 
+
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
 
