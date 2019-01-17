@@ -2,20 +2,17 @@
 // ====================== main ========================
 
 .main{
-    background: $secondaryColor;
-    text-align:center;
-    &__h3 {
-        @include headingFont(2rem);
-        margin:50px 0;
+    background: white;
+    text-align: center;
 
+    &__h3 {
+        @include bodyFont(2rem);
+        margin: 10px 0;
+        font-weight: 400;
     }
+
     &__mapPadding{
         padding:10px 0;
-    }
-    &__divider{
-        border:1px solid black;
-        width:10%;
-        margin: 30px auto;
     }
     &__button{
         @include button(1.8rem);
@@ -31,24 +28,31 @@
     }
     &__displayResults{
         @include bodyFont($primaryColor);
-        // text-align:left;
-        border:1px solid $primaryColor;
+        // border:1px solid $primaryColor;
         margin-bottom:10px;
         padding:10px;
         text-transform: capitalize;
-        background:$primaryColor;
+        // background:white;
+        width: 50%;
     }
     &__fontAwesome{
         font-size: 3rem;
     }
 
     &__map{
-        background: $primaryColor;
+        background: white;
+        width: 100%;
+        box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.3);
         padding: 0px 0 50px 0;
         margin-top: 50px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+
+        &--container{
+            border: 2px solid blue;
+            width: 50%;
+        }
 
         &--filterButtons{
             display: flex;
@@ -62,13 +66,14 @@
 
 // ================= header ========================
 .header{
-    background:$primaryColor;
+    background: white;
+    // border: 2px solid red;
     &__subTitle{
-        margin:0;
+        margin: 0;
         text-align:center;
-        @include headingFont(6rem);
-        padding:20px 0;
-        color:white;
+        @include headingFont(6.5rem);
+        padding: 5px 0 20px 0;
+        color: $red;
     }
     
 }
@@ -76,26 +81,83 @@
 // =============== form ==================
 
 .mainForm{
-    @include bodyFont(black);
+    @include bodyFont(white);
     font-size:1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: wrap;
+    // border: 2px solid yellowgreen;
 
-    &__inputLabel--displayFlex{
-        display:flex;
-        justify-content: space-around;
-        margin:center;
-        
+    &--title {
+        @include headingFont(2.2rem);
+        background: $red;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
     }
-    &__inputLabel--column{
-        display:flex;
-        flex-direction:column;
+
+    &__individualContainer {
+        background: $blue;
+        margin: 10px;
+        padding: 0 0px 10px 0px;
+        border-radius: 15px;
+        box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.5);
+        width: calc(48% - 20px);
+        min-width: 400px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        padding:0 10px;
-        font-size:2rem;
-        position:relative;
-        background:$secondaryColor;
     }
+
+    &--addressContainer{
+        width: 100%;
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
     &__address{
-        margin:0;
+        margin: 0 0 10px 0;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+        height: 50px;
+        @include bodyFont(white);
+        letter-spacing: 0.05rem;
+        line-height: 2.5rem;
+    }
+
+    &__mot{
+        @extend .mainForm__address;
+        margin: 0px;
+        height: 30px;
+    }
+
+    &__input{
+        height: 60px;
+        border-radius: 10px;
+        border: none;
+        margin: 0;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    &__inputLabel--displayFlex {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    &__inputLabel--column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        font-size: 4rem;
+        // position: relative;
+        // background: $secondaryColor;
+        // border: 2px solid yellow;
     }
 
     &__errorMessage{
@@ -137,15 +199,17 @@ label{
 // ================= display result ======================
 
 .main__displayResults--title{
-    text-align:center;
+    // text-align:center;
     @include headingFont(2.8rem);
     color:$primaryColor;
 }
 .main__displayResults--picture{
     margin:0;
+    max-width: 300px;
+    max-height: 300px;
 }
 .main__displayResults{
-    background:$secondaryColor;
+    // background:$secondaryColor;
   
     &__display--title,
     &__display--number{

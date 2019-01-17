@@ -1,8 +1,10 @@
 $primaryColor:#0d6978;
 $secondaryColor:#b6d2cf;
 $thirdColor:#e898e9;
-$grey:#adaeae;
 
+$grey: #adaeae;
+$blue: linear-gradient(90deg, rgba(42, 0, 160, 1) 0%, rgba(42, 33, 222, 1) 100%);
+$red: #ff594f;
 
 @mixin headingFont($fontsize){
     font-size:$fontsize;
@@ -19,22 +21,23 @@ $grey:#adaeae;
 }
 
 @mixin button($fontSize) {
-    @include bodyFont($thirdColor);
-    text-transform: uppercase;
+    @include bodyFont(black);
     display: block;
+    text-transform: uppercase;
     font-size:$fontSize;
+    margin:20px auto;
     padding: 20px 20px;
     width:250px;
+    background: rgb(216, 216, 216);
+    border: none;
+    text-decoration: none;
+
     cursor: pointer;
-    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom:10px;
-    border-radius:50px;
-    margin:20px auto;
-    &:active {
+
+    &:active,
+    &:hover {
         outline: none;
-        -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-        -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-        box-shadow: inset 0px 0px 5px #c1c1c1;
+        background: $red;
     }
 
 }
@@ -57,16 +60,14 @@ $grey:#adaeae;
 }
 
 .wrapper {
-    width:90%;
+    width: 90%;
     margin: 0 auto;
-    max-width:750px;
+    max-width: 1200px;
 }
 // add this class to implement button styles to all buttons on the app. 
 .app__button{
     @include button(1.8rem);
-    font-weight:bold;
-    text-decoration: none;
-    background:white;
+    font-weight: 700;
 }
 
 // add this class to implement input styles to all buttons
@@ -80,16 +81,16 @@ input[type="radio"]{
 }
 .app__font-awesome:hover,
 .app__radioLabel:hover{
-    color:$thirdColor;
+    color: $red;
 }
 .app__font-awesome{
-    font-size:3rem;
+    font-size: 4.5rem;
     margin-top: 20px;
 }
 .app__radioLabel{
-    color:$primaryColor;
+    color: white;
 }
 .activeLabel {
-    color: $thirdColor;
+    color: $red;
     
 }

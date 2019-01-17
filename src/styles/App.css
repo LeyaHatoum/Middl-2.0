@@ -153,31 +153,27 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 .wrapper {
   width: 90%;
   margin: 0 auto;
-  max-width: 750px; }
+  max-width: 1200px; }
 
 .app__button {
   line-height: 1.8rem;
   font-family: 'Work Sans', sans-serif;
   font-size: 1.6rem;
-  color: #e898e9;
-  text-transform: uppercase;
+  color: black;
   display: block;
+  text-transform: uppercase;
   font-size: 1.8rem;
+  margin: 20px auto;
   padding: 20px 20px;
   width: 250px;
-  cursor: pointer;
-  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 10px;
-  border-radius: 50px;
-  margin: 20px auto;
-  font-weight: bold;
+  background: #d8d8d8;
+  border: none;
   text-decoration: none;
-  background: white; }
-  .app__button:active {
+  cursor: pointer;
+  font-weight: 700; }
+  .app__button:active, .app__button:hover {
     outline: none;
-    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-    box-shadow: inset 0px 0px 5px #c1c1c1; }
+    background: #ff594f; }
 
 .app__input {
   width: 300px;
@@ -191,17 +187,17 @@ input[type="radio"] {
 
 .app__font-awesome:hover,
 .app__radioLabel:hover {
-  color: #e898e9; }
+  color: #ff594f; }
 
 .app__font-awesome {
-  font-size: 3rem;
+  font-size: 4.5rem;
   margin-top: 20px; }
 
 .app__radioLabel {
-  color: #0d6978; }
+  color: white; }
 
 .activeLabel {
-  color: #e898e9; }
+  color: #ff594f; }
 
 .login {
   background: linear-gradient(90deg, #b6d2cf 50%, #0d6978 50%);
@@ -308,49 +304,41 @@ span.login__span--secondaryColor {
   text-transform: uppercase;
   margin-bottom: 0; }
 
-.app__radioLabel {
-  background: #b6d2cf; }
-
 .main {
-  background: #b6d2cf;
+  background: white;
   text-align: center; }
   .main__h3 {
-    font-size: 2rem;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 50px 0; }
+    line-height: 1.8rem;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.6rem;
+    color: 2rem;
+    margin: 10px 0;
+    font-weight: 400; }
   .main__mapPadding {
     padding: 10px 0; }
-  .main__divider {
-    border: 1px solid black;
-    width: 10%;
-    margin: 30px auto; }
   .main__button {
     line-height: 1.8rem;
     font-family: 'Work Sans', sans-serif;
     font-size: 1.6rem;
-    color: #e898e9;
-    text-transform: uppercase;
+    color: black;
     display: block;
+    text-transform: uppercase;
     font-size: 1.8rem;
+    margin: 20px auto;
     padding: 20px 20px;
     width: 250px;
+    background: #d8d8d8;
+    border: none;
+    text-decoration: none;
     cursor: pointer;
-    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
-    border-radius: 50px;
-    margin: 20px auto;
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin: 10px auto;
     padding: 0; }
-    .main__button:active {
+    .main__button:active, .main__button:hover {
       outline: none;
-      -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-      box-shadow: inset 0px 0px 5px #c1c1c1; }
+      background: #ff594f; }
   .main__button--displayFlex {
     display: flex; }
   .main__displayResults {
@@ -358,20 +346,24 @@ span.login__span--secondaryColor {
     font-family: 'Work Sans', sans-serif;
     font-size: 1.6rem;
     color: #0d6978;
-    border: 1px solid #0d6978;
     margin-bottom: 10px;
     padding: 10px;
     text-transform: capitalize;
-    background: #0d6978; }
+    width: 50%; }
   .main__fontAwesome {
     font-size: 3rem; }
   .main__map {
-    background: #0d6978;
+    background: white;
+    width: 100%;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.3);
     padding: 0px 0 50px 0;
     margin-top: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center; }
+    .main__map--container {
+      border: 2px solid blue;
+      width: 50%; }
     .main__map--filterButtons {
       display: flex;
       flex-direction: row;
@@ -380,37 +372,84 @@ span.login__span--secondaryColor {
       padding: 20px 0; }
 
 .header {
-  background: #0d6978; }
+  background: white; }
   .header__subTitle {
     margin: 0;
     text-align: center;
-    font-size: 6rem;
+    font-size: 6.5rem;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 20px 0;
-    color: white; }
+    padding: 5px 0 20px 0;
+    color: #ff594f; }
 
 .mainForm {
   line-height: 1.8rem;
   font-family: 'Work Sans', sans-serif;
   font-size: 1.6rem;
-  color: black;
-  font-size: 1.2rem; }
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow: wrap; }
+  .mainForm--title {
+    font-size: 2.2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #ff594f;
+    width: 100%;
+    margin: 0;
+    padding: 10px; }
+  .mainForm__individualContainer {
+    background: linear-gradient(90deg, #2a00a0 0%, #2a21de 100%);
+    margin: 10px;
+    padding: 0 0px 10px 0px;
+    border-radius: 15px;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.5);
+    width: calc(48% - 20px);
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .mainForm--addressContainer {
+    width: 100%;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; }
+  .mainForm__address, .mainForm__mot {
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    height: 50px;
+    line-height: 1.8rem;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: 0.05rem;
+    line-height: 2.5rem; }
+  .mainForm__mot {
+    margin: 0px;
+    height: 30px; }
+  .mainForm__input {
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    margin: 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2); }
   .mainForm__inputLabel--displayFlex {
     display: flex;
-    justify-content: space-around;
-    margin: center; }
+    justify-content: space-around; }
   .mainForm__inputLabel--column {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 10px;
-    font-size: 2rem;
-    position: relative;
-    background: #b6d2cf; }
-  .mainForm__address {
-    margin: 0; }
+    font-size: 4rem; }
   .mainForm__errorMessage {
     position: absolute;
     width: 400px;
@@ -443,7 +482,6 @@ label {
   margin-bottom: 10px; }
 
 .main__displayResults--title {
-  text-align: center;
   font-size: 2.8rem;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
@@ -451,13 +489,13 @@ label {
   color: #0d6978; }
 
 .main__displayResults--picture {
-  margin: 0; }
+  margin: 0;
+  max-width: 300px;
+  max-height: 300px; }
 
-.main__displayResults {
-  background: #b6d2cf; }
-  .main__displayResults__display--title, .main__displayResults__display--number {
-    color: #0d6978;
-    text-align: center; }
+.main__displayResults__display--title, .main__displayResults__display--number {
+  color: #0d6978;
+  text-align: center; }
 
 .main__messagesButton {
   position: absolute;
