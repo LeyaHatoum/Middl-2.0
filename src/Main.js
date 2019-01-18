@@ -58,6 +58,7 @@ class Main extends Component {
                     return (lat == midLat && long == midLng)
         }) 
             return(<div className="main__displayResults wrapper" key={`div-${resultArray[0].alias}`}>
+                
                 <p className="main__displayResults--title">{resultArray[0].name}</p>
                 <p className="main__displayResults--number">{resultArray[0].display_phone}</p>
                 <div className={this.state.travelMode ? null: "visuallyhidden"}>
@@ -118,7 +119,7 @@ class Main extends Component {
                 </header>
 
                 <div className="main wrapper">
-                    <h3 key="main-h2" className="main__h3">Please provide the following information</h3>
+                    {/* <h3 key="main-h2" className="main__h3">Please provide the following information</h3> */}
                     <form key="main-form" className="mainForm" >
 
                         {/* User form section */}
@@ -146,7 +147,6 @@ class Main extends Component {
 
                                         <label className={`app__radioLabel ${(this.props.userMOT === "driving") ? "activeLabel" : ""}`} htmlFor="carUser"><FontAwesomeIcon className="app__font-awesome" icon={faCar} /></label>
                                         <input className="activeInput visuallyhidden" name="userMOT" type="radio" value="driving" id="carUser" onChange={this.props.handleMOTChange}/>
-                                        <input name="userMOT" type="radio" value="driving" id="carUser" onChange={this.props.handleMOTChange}/>
 
                                     </div>
                                     <div className="mainForm__inputLabel--column">
@@ -200,8 +200,8 @@ class Main extends Component {
                         className="app__button">Middl. Me</button>
 
                     <div className="main__map">
+                        <h4 className="mainForm--title">Where To Go</h4>
                         <div className="main__map--container">
-                        
                             <div className="main__mapPadding">
                                 <div className={this.state.markerMidPoint.lat ? " visuallyhidden main__button--displayFlex" : "main__button--displayFlex"}>
                                     <div className="main__map--filterButtons">
@@ -240,7 +240,7 @@ class Main extends Component {
                         />
                         </div>
 
-                        
+
                         {/* this ternary statement will call directions on mymapcomponent */}
                         
                         {

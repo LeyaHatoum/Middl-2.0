@@ -2,7 +2,7 @@
 // ====================== main ========================
 
 .main{
-    background: white;
+    // background: white;
     text-align: center;
 
     &__h3 {
@@ -15,12 +15,15 @@
         padding:10px 0;
     }
     &__button{
-        @include button(1.8rem);
+        // @include button(1.8rem);
         width: 100px;
         height: 100px;
-        border-radius: 50%;
+        // border-radius: 50%;
         margin: 10px auto;
         padding: 0;
+        // color: $red;
+        background: none;
+        border: none;
     }
     &__button--displayFlex{
         display:flex;
@@ -34,24 +37,35 @@
         text-transform: capitalize;
         // background:white;
         width: 50%;
+        color: $red;
     }
     &__fontAwesome{
-        font-size: 3rem;
+        font-size: 4rem;
+        color: $red;
+
+        &--notShowing {
+            font-size: 4rem;
+            color: white;
+        }
     }
 
     &__map{
         background: white;
         width: 100%;
         box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.3);
-        padding: 0px 0 50px 0;
-        margin-top: 50px;
+        // padding: 0px 0 50px 0;
+        margin: 50px 0;
+        // border-radius: 15px;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        flex-flow: wrap;
+        // justify-content: center;
 
         &--container{
             border: 2px solid blue;
             width: 50%;
+            padding: 20px;
+            background: $blue;
         }
 
         &--filterButtons{
@@ -66,7 +80,7 @@
 
 // ================= header ========================
 .header{
-    background: white;
+    // background: white;
     // border: 2px solid red;
     &__subTitle{
         margin: 0;
@@ -92,7 +106,7 @@
     &--title {
         @include headingFont(2.2rem);
         background: $red;
-        width: 100%;
+        min-width: 100%;
         margin: 0;
         padding: 10px;
     }
@@ -108,6 +122,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex-flow: wrap;
     }
 
     &--addressContainer{
@@ -155,7 +170,7 @@
         align-items: center;
         padding: 0 10px;
         font-size: 4rem;
-        // position: relative;
+        position: relative;
         // background: $secondaryColor;
         // border: 2px solid yellow;
     }
@@ -201,23 +216,23 @@ label{
 .main__displayResults--title{
     // text-align:center;
     @include headingFont(2.8rem);
-    color:$primaryColor;
+    color: $red;
 }
 .main__displayResults--picture{
     margin:0;
     max-width: 300px;
     max-height: 300px;
 }
-.main__displayResults{
-    // background:$secondaryColor;
-  
-    &__display--title,
-    &__display--number{
-        color:$primaryColor;
-        text-align: center;
-    }
 
-}
+// .main__displayResults{
+//     background:$secondaryColor;
+//     &__display--title,
+//     &__display--number{
+//         color: $red;
+//         text-align: center;
+//     }
+
+// }
 
 
 //====================== messages ===============================
