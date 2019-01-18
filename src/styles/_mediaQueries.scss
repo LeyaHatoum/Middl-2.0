@@ -1,0 +1,85 @@
+@media all and (max-width: 1140px){
+  .mainForm{
+    &__address{
+      height: 80px;
+    }
+  }
+
+}
+
+@media all and (max-width: 830px) {
+  .mainForm {
+    flex-direction: column;
+    align-items: center;
+    &__individualContainer {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  .main{
+    &__displayResults{
+      width: 100%;
+      max-width: 500px;
+    }
+
+    &__map{
+      flex-direction: column;
+      align-items: center;
+      &--container{
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+@media all and (max-width: 380px) {
+  .mainForm {
+    &__individualContainer {
+      max-width: 280px;
+      width: 280px;
+      min-width: 280px;
+      justify-content: center;
+    }
+    &__address{
+      text-align: center;
+      height: auto;
+    }
+    &__mot{
+      text-align: center;
+    }
+    &__input{
+      text-align: center;
+    }
+    &--addressContainer{
+      padding: 10px;
+    }
+  }
+
+  .app__font-awesome {
+    font-size: 3.5rem;
+  }
+
+  .main{
+    &__fontAwesome{
+      font-size: 3.5rem;
+      &--notShowing {
+        font-size: 3.5rem;
+      }
+    }
+    &__map{
+      &--filterButtons {
+        width: 90px;
+      }
+    }
+    &__displayResults{
+      padding: 10px;
+      line-height: 2.5rem;
+      &--picture{
+        max-width: 250px;
+        max-height: 250px;
+      }
+    }
+  }
+}
